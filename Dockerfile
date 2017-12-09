@@ -1,4 +1,4 @@
-FROM alpine:3.7
+FROM alpine:latest
 
 ENV H5AI_VERSION 0.29.0
 
