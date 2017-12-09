@@ -14,7 +14,7 @@ Further runs will be immediate, as the image will be cached locally.
 The recommended way to run this container looks like this:
 
 ```bash
-$ sudo docker run -it --rm -p 80:80 -v /your/data:/var/www bixidock/h5ai
+$ sudo docker run -it --rm -p 80:80 -v /your/data:/var/www korni22/docker-h5ai
 ```
 
 You can also use docker-compose.yml to run this container
@@ -26,7 +26,7 @@ version: '2'
 services:
 
   h5ai:
-    image: bixidock/h5ai
+    image: korni22/docker-h5ai
     container_name: h5ai
     restart: always
     volumes:
