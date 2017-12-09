@@ -1,22 +1,19 @@
-FROM alpine:3.4
-MAINTAINER Barra <bxt@mondedie.fr>
+FROM alpine:3.7
 
 ENV H5AI_VERSION 0.29.0
 
-RUN echo "@commuedge http://nl.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories \
- && echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >> /etc/apk/repositories \
- && apk -U add \
+RUN apk -U add \
     nginx \
     supervisor \
-    tini@commuedge \
-    php7-fpm@commuedge \
-    php7-curl@commuedge \
-    php7-iconv@commuedge \
-    php7-xml@commuedge \
-    php7-dom@commuedge \
-    php7-json@commuedge \
-    php7-zlib@commuedge \
-    php7-session@commuedge \
+    tini \
+    php7-fpm \
+    php7-curl \
+    php7-iconv \
+    php7-xml \
+    php7-dom \
+    php7-json \
+    php7-zlib \
+    php7-session \
     wget \
     unzip \
     patch \
